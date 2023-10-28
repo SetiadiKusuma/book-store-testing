@@ -33,6 +33,7 @@ describe('Create Books', () => {
       result = error
     }
 
+    console.log(result)
     expect(result.response.status).to.equal(400);
     expect(result.response.data.message).to.equal("ISBN already present in the User's Collection!");
 
@@ -69,7 +70,7 @@ describe('Create Books', () => {
       result = error
     }
 
-
+    // console.log(result)
     expect(result.response.status).to.equal(400);
     expect(result.response.data.message).to.equal("ISBN supplied is not available in Books Collection!");
   })
